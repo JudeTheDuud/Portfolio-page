@@ -8,13 +8,17 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="container" id="blur">
+
+
+    
     <nav class="nav">
       <div class="nav-logo">J.O</div>
 
       <div>
         <ul class="nav-list">
           <li><a href="#about">About</a></li>
-          <li><a href="">Skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="">Projects</a></li>
           <li><a id="contact" href="#contact-sect">Contact</a></li>
         </ul>
@@ -39,6 +43,7 @@
           <img class="linkedin" src="./images/svgs/linkedin.svg" alt="" />
           <img class="github" src="./images/svgs/github.svg" alt="" />
           <img class="email" src="./images/svgs/email.svg" alt="" />
+          <img id = 'twitter' class="twitter"src="./images/svgs/twitter.svg" alt="">
         </div>
       </div>
 
@@ -63,31 +68,84 @@
     </div>
     </section>
 
+    <section id = "skills" class="skills-wrapper">
+      <h4>My Skills</h4>
+
+      <div class="skills">
+        <div class="skills-images-1">
+        <img class = 'skill-border'src="./images/svgs/html-16.svg" alt="html">
+        <img class = 'skill-border'src="./images/svgs/css-16.svg" alt="">
+        <img class = 'skill-border'src="./images/svgs/javascript-outline.svg" alt="">
+        <img class = 'skill-border'src="./images/svgs/node-line.svg" alt="">
+        </div>
+
+
+        <div class="skills-images-2">
+        <img class = 'skill-border'src="./images/svgs/react.svg" alt="">
+        <img class = 'skill-border'src="./images/svgs/tailwind.svg" alt="">
+        <img class = 'skill-border'src="./images/svgs/git-outline.svg" alt="">
+        <img class = 'skill-border'src="./images/svgs/mongodb-outline.svg" alt="">
+
+        </div>
+        
+      </div>
+    </section>
+
+
+
     <section class="contact" id="contact-sect">
       <h3>Contact Me</h3>
       <p>As a seasoned software engineer, I bring a wealth of expertise in coding, problem-solving, and software architecture to the table. I specialize in crafting innovative solutions and am adept at remote collaboration. I'm excited to connect and explore potential collaborations.</p>
       
 
         <div >
-          <button class="contact-sect-btn">Let's do this!</button>
+          <button onclick="toggle()" class="contact-sect-btn">Let's do this!</button>
         </div>
-      
-      
+        
+
+        <div class="contactf" id="contact-form">
+
+          <button onclick="close()" class="close" id = "close" >&times;</button>
+          <h5>Let`s build something together!</h5>
+          <form class="contact-form" action="">
+            <div class="form-group">
+              <label for="Name"></label>
+              <input id = "name"  type="text" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+              <label for="email"></label>
+              <input id = "email" type="email" placeholder="Email">
+            </div>
+
+
+            <div class="form-group form-group--full-width">
+              <textarea name="message" id="message" placeholder="Message" cols="30" rows="5"></textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="form-button">
+
+          </form>
+        </div>
+      <div id="overlay" ></div>
       <img class = "contact-socials" src="./images/svgs/linkedin.svg" alt="">
       <img class = "contact-socials" src="./images/svgs/github.svg" alt="">
       <img class = "contact-socials" src="./images/svgs/email.svg" alt="">
+      <img  id = 'twitter' class = "contact-socials" src="./images/svgs/twitter.svg" alt="">
 
       <div>
         <ul class="contact-nav">
           <li><a href="/">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="">Skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="">Projects</a></li>
         </ul>
       </div>
 
-      <div class="rights">&copy 2023 Juda Osai All Rights Reserved.</div>
+      <div class="rights">&copy 2023 <span>Juda Osai</span> All Rights Reserved.</div>
     </section>
+
+  </div>
     <script src="./script.js"></script>
   </body>
 </html>
